@@ -60,9 +60,10 @@
       */
 
       function addClassToTitle(){
-          let addTitleClass = document.querySelector('h1')
-          console.log(addTitleClass)
-          addTitleClass.classList.add = "myHeading"
+        h1title.classList.add("myHeading")
+          // let addTitleClass = document.querySelector('h1')
+          // console.log(addTitleClass)
+          // addTitleClass.classList.add = "myHeading"
 
       }
 
@@ -92,11 +93,12 @@
        Write a function for adding a new item in the second list.
        */
 
-      function addToTheSecond(){
+      function addToTheSecond(content){
           let thegettheText =  document.getElementById('secondList')
-          let addSecond = document.createTextNode("Something New")
+          let addSecond = document.createTextNode(content)
           console.log(addSecond)
           thegettheText.appendChild(addSecond)
+          return console.log("newe item")
 
 
       }
@@ -166,11 +168,8 @@
       */
 
       const inputField = document.getElementById('input-field')
-      document.addEventListener('keypress', logKey);
-
-    function logKey() {
-        console.log(logKey)
-    
+      inputField.onkeypress = function(event) {
+        console.log(event.target.value)
 }
      
       /* EXERCISE 12
